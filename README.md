@@ -66,7 +66,7 @@ bash
 Copy
 Edit
 # Clone the repository
-git clone https://github.com/yourusername/vocapick.git
+git clone [https://github.com/yourusername/vocapick.git](https://github.com/IamsooAlive/VocaPick.git)
 cd vocapick
 
 # Backend setup

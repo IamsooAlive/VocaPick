@@ -1,32 +1,32 @@
+📦 VocaPick – Real-Time Voice-Powered Warehouse Management
+VocaPick is a real-time, hands-free warehouse picking and packing system designed to make warehouse operations faster, smarter, and more collaborative.
+It replaces manual scanning and list-checking with voice commands, supports Japanese and English, and allows supervisors to monitor progress in real time via a dashboard—without interrupting workflow.
 
-# 📦 VocaPick – Hands-Free Voice-Activated Picking for Smarter Warehouses
+🚀 Features
+Secure Login System – Separate login for workers and supervisors.
 
-**VocaPick** is a **hands-free warehouse management module** designed to speed up picking & packing operations using **voice commands**.
-Built with **Java (Spring Boot)**, **Oracle Database**, and **AWS Transcribe** for speech-to-text recognition, it supports both **Japanese** and **English**, enabling real-time inventory updates and improved efficiency in warehouse operations.
+Voice-Enabled Picking & Packing – Powered by Java and AWS Transcribe.
 
----
+Multi-Language Support – Works seamlessly in Japanese and English.
 
-## 🚀 Features
+Real-Time Inventory Updates – No delays, updates happen instantly.
 
-* 🎙 **Voice Command Integration** – Workers can receive and confirm picking instructions using only their voice.
-* 🌐 **Multi-Language Support** – Japanese 🇯🇵 & English 🇬🇧 speech recognition.
-* 📊 **Real-Time Inventory Updates** – Automatic updates in Oracle DB when an order is picked or packed.
-* 🖥 **Supervisor Dashboard** – Web interface for live monitoring of orders and worker progress.
-* 🔐 **Secure Role-Based Access** – Separate permissions for workers, supervisors, and admins.
-* ☁ **Cloud-Ready** – Designed for AWS deployment and scalable across multiple warehouses.
+Supervisor Dashboard – Live task tracking without interfering with work.
 
----
+Hands-Free Operation – Focus on the task, not the tech.
 
-## 🛠 Tech Stack
+🛠 Tech Stack
+Backend: Java
 
-* **Backend:** Java (Spring Boot)
-* **Database:** Oracle Database
-* **Speech-to-Text:** AWS Transcribe API
-* **Frontend:** HTML, CSS, JavaScript
-* **Hosting:** AWS EC2 / Elastic Beanstalk
-* **Version Control:** Git + GitHub
+Speech Recognition: AWS Transcribe
 
----
+Cloud Hosting & Storage: AWS (S3, Lambda, DynamoDB / RDS)
+
+Frontend: HTML, CSS, JavaScript (for dashboard & login)
+
+Authentication: AWS Cognito or Spring Security
+
+Real-Time Updates: WebSockets / AWS API Gateway
 
 ## 📂 Project Structure
 
@@ -44,64 +44,43 @@ VocaPick/
 ```
 
 ---
+🔄 How It Works (Real-Time Flow)
+Login – Workers & supervisors log in securely.
 
-## ⚙️ Setup Instructions
+Voice Command – Worker says the picking/packing instruction.
 
-### **1️⃣ Clone the Repository**
+Speech Recognition – AWS Transcribe converts speech to text.
 
-```bash
-git clone https://github.com/your-username/VocaPick.git
-cd VocaPick
-```
+Processing – Java backend interprets the instruction and updates inventory.
 
-### **2️⃣ Backend Setup**
+Database Update – Changes are saved instantly in the cloud.
 
-* Install Java 17+ and Maven
-* Configure **application.properties** with Oracle DB credentials
+Supervisor Dashboard – Managers see live task progress without interrupting workers.
 
-```properties
-spring.datasource.url=jdbc:oracle:thin:@localhost:1521:xe
-spring.datasource.username=YOUR_DB_USER
-spring.datasource.password=YOUR_DB_PASSWORD
-aws.transcribe.accessKey=YOUR_AWS_ACCESS_KEY
-aws.transcribe.secretKey=YOUR_AWS_SECRET_KEY
-```
+🎥 Live Demo
+🔗 Watch Live Demo Here
+https://voca-pick.netlify.app/
 
-* Run the backend:
+📦 Installation & Setup
+bash
+Copy
+Edit
+# Clone the repository
+git clone https://github.com/yourusername/vocapick.git
+cd vocapick
 
-```bash
+# Backend setup
+cd backend
+mvn install
 mvn spring-boot:run
-```
 
-### **3️⃣ Frontend Setup**
+# Frontend setup
+cd frontend
+npm install
+npm start
+📜 License
+This project is licensed under the MIT License.
 
-* Open `frontend/index.html` in your browser for the dashboard view.
 
----
 
-## 🎯 How It Works
-
-1. **Worker says:** “Pick 3 of SKU 1021 from Aisle 4.”
-2. **AWS Transcribe** converts the speech to text.
-3. **Spring Boot Backend** parses the command and validates SKU from Oracle DB.
-4. **Database updates** the order status in real-time.
-5. **Supervisor Dashboard** reflects the updated progress instantly.
-
----
-
-## 📹 Live Demo
-
-🎥 **Watch VocaPick in action:** https://vocapick.netlify.app/
-
----
-
-## 🧠 Future Enhancements
-
-* 📷 **Image Recognition** for visual item verification.
-* 🤝 **Integration with IoT sensors** for pallet/forklift tracking.
-* 📈 **AI-based demand forecasting** to optimize stock levels.
-
----
-
-If you want, I can also **design a minimal but professional VocaPick logo** so the README looks visually appealing and branded. That would help your application feel more like a *real product pitch*.
 
